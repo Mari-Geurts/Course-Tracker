@@ -7,7 +7,7 @@ Update 2/16/24: Program now reads your current date, and calculates how many ass
 Paste into console on boot.dev courses page to get assignments info:
 
 ```JavaScript
-let count = document.querySelector("#__nuxt > div > div.static-bgimage > div > div.flex.h-full.flex-1.flex-col.overflow-auto.align-top > div > div > div.max-w-5xl.flex-1 > section > div > div:nth-child(3) > div:nth-child(4)").querySelectorAll("span.mb-1");
+let count = document.querySelector("#__nuxt > div > div.static-bgimage > div > div.flex.h-full.flex-1.flex-col.overflow-auto.align-top > div > div > div.max-w-5xl.flex-1 > section > div > div:nth-child(3) > div:nth-child(5)").querySelectorAll("span.mb-1");
 let mySum = 0;
 let total = 0;
 let completed = 0;

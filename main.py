@@ -3,22 +3,18 @@ from datetime import date
 import math
 
 #total course count as of 02/14/24
-total_courses = 1226
+total_courses = 1251
 
 #Completed problems as of 02/15/24
-problems_completed = 318
+problems_completed = 353
+
 
 #Function to calculate incomplete assignments
 def get_incomplete_courses(completed):
     return total_courses - completed
 
+incomplete = get_incomplete_courses(problems_completed)
 
-joined_date = {
-      "Month": 12,
-      "Day": 1,
-      "Year": 2023,
-      "FullDate": date(2023,12,1),
-}
 
 end_date = {
       "Month": 12,
@@ -28,9 +24,7 @@ end_date = {
 }
 
 
-#print(f"Total Assignments: {total_courses}")
-#print(f"Assignments Completed: {problems_completed}")
-print(f"Remaining Assignments: {get_incomplete_courses(problems_completed)}")
+print(f"Remaining Assignments: {incomplete}")
 
 #Stores today date in instanced object
 today_date = datetime.today()
@@ -46,9 +40,12 @@ def get_days_left():
     #print(f"Difference in Days: {difference_in_days}")
     return difference_in_days
 
-def get_avg_assignments(difference):
-    avg = (get_incomplete_courses(problems_completed)) / difference
+days_left = get_days_left()
+
+def get_avg_assignments(days):
+    avg = (incomplete) / days
     print(f"Average Assignments to complete a day: {math.ceil(avg)}")
+    print(f"Not rounded: {(avg)}")
     return avg
 
-get_avg_assignments(get_days_left())
+get_avg_assignments(days_left)
